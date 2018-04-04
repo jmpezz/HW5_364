@@ -59,7 +59,7 @@ class TodoItem(db.Model):
 
 # Provided - Form to create a todo list
 class TodoListForm(FlaskForm):
-    name = StringField("What is the title of this TODO List?", validators=[Required()])
+    name = StringField("Name your To Do List", validators=[Required()])
     items = TextAreaField("Enter your TODO list items in the following format: Description, Priority -- separated by newlines")
     submit = SubmitField("Submit")
 
@@ -71,10 +71,10 @@ class UpdateButtonForm(FlaskForm):
 #(HINT: What class activity you have done before is this similar to?)
 class PriorityUpdate(FlaskForm):
     new_priority = IntegerField('Update the priority of the To-Do Item', validators = [Required()])
-    update = SubmitField('Update')
+    update = SubmitField('Update Priority')
 # TODO 364: Define a DeleteButtonForm class for use to delete todo items
 class DeleteButtonForm(FlaskForm):
-    delete = SubmitField('Delete')
+    delete = SubmitField('Delete List')
 
 
 ################################
